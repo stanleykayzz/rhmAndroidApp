@@ -4,10 +4,111 @@
     android:layout_height="match_parent"
     tools:context="rhm.com.fragment.booking">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Message de teste
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="reeesssseeerrrvvaaaatttiiiooonnnn" />
+        android:text="reeesssseeerrrvvaaaatttiiiooonnnn" />-->
 
+    <!-- formulaire de réservation -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nom" />
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/lastName"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Prénom" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/firstName"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/email"
+            android:ems="10"
+            android:inputType="phone"
+            tools:text="Numéro de téléphone (avec indicatif)" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/phoneNumber"
+            android:dropDownWidth="match_parent"
+            android:entries="@array/roomList"
+            android:prompt="@string/room_type"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/countRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/spinner"
+            android:layout_alignBottom="@+id/spinner"
+            android:layout_toEndOf="@+id/spinner"
+            android:layout_toRightOf="@+id/spinner"
+            android:ems="10"
+            android:inputType="numberSigned"
+            tools:text="Nombre de chambres" />
+
+        <EditText
+            android:id="@+id/arriveDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spinner"
+            android:ems="10"
+            android:inputType="date"
+            tools:text="Date d'arrivé" />
+
+        <EditText
+            android:id="@+id/departureDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/arriveDate"
+            android:ems="10"
+            android:inputType="date"
+            tools:text="Date de départ" />
+
+        <Button
+            android:id="@+id/validate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valider"
+            android:layout_below="@+id/departureDate"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 </FrameLayout>
