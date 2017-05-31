@@ -53,5 +53,14 @@
             android:ems="10"
             android:inputType="textMultiLine"
             android:text="Saisissez votre message ici."/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="89dp"
+            android:text="Envoyer" />
     </RelativeLayout>
 </FrameLayout>
