@@ -18,6 +18,7 @@ import rhm.com.fragment.gallery;
 import rhm.com.fragment.main;
 import rhm.com.fragment.booking;
 import rhm.com.fragment.room;
+import rhm.com.fragment.contact;
 import rhm.com.fragment.hotel;
 import rhm.com.fragment.login;
 import rhm.com.fragment.logout;
@@ -108,9 +109,9 @@ public class MainActivity extends AppCompatActivity
             fragMan.beginTransaction().replace(R.id.content_frame, new login()).commit();
         } else if (id == R.id.nav_logout) {
             fragMan.beginTransaction().replace(R.id.content_frame, new logout()).commit();
-        } /*else if (id == R.id.nav_send) {
-            fragMan.beginTransaction().replace(R.id.content_frame, new main_fragment()).commit();
-        }*/
+        } else if (id == R.id.nav_contact) {
+            fragMan.beginTransaction().replace(R.id.content_frame, new contact()).commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
