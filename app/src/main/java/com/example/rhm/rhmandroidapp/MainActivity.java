@@ -2,6 +2,7 @@ package com.example.rhm.rhmandroidapp;
 
 import android.app.FragmentManager;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,7 @@ import rhm.com.fragment.gallery;
 import rhm.com.fragment.main;
 import rhm.com.fragment.booking;
 import rhm.com.fragment.room;
+import rhm.com.fragment.location;
 import rhm.com.fragment.contact;
 import rhm.com.fragment.hotel;
 import rhm.com.fragment.login;
@@ -33,14 +35,14 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -98,7 +100,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.content_frame) {
             fragMan.beginTransaction().replace(R.id.content_frame, new main()).commit();
         } else if (id == R.id.nav_gallery) {
-            fragMan.beginTransaction().replace(R.id.content_frame, new gallery()).commit();
+           // fragMan.beginTransaction().replace(R.id.content_frame, new gallery()).commit();
+            Intent gallery = new Intent(this, com.example.rhm.rhmandroidapp.gallery.class);
+            startActivity(gallery);
+            this.finish();
+
         } else if (id == R.id.nav_book) {
             fragMan.beginTransaction().replace(R.id.content_frame, new booking()).commit();
         } else if (id == R.id.nav_room) {
@@ -111,6 +117,8 @@ public class MainActivity extends AppCompatActivity
             fragMan.beginTransaction().replace(R.id.content_frame, new logout()).commit();
         } else if (id == R.id.nav_contact) {
             fragMan.beginTransaction().replace(R.id.content_frame, new contact()).commit();
+        } else if (id == R.id.nav_location) {
+            fragMan.beginTransaction().replace(R.id.content_frame, new location()).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

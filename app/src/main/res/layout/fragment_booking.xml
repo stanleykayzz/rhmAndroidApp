@@ -4,14 +4,7 @@
     android:layout_height="match_parent"
     tools:context="rhm.com.fragment.booking">
 
-    <!-- Message de teste
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="reeesssseeerrrvvaaaatttiiiooonnnn" />-->
-
     <!-- formulaire de réservation -->
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

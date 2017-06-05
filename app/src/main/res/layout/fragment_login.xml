@@ -57,13 +57,13 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_login"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="11dp"
-            android:hint="Vous avez oublié votre mot de passe ?"
+            android:hint="Créer un compte"
             />
 
         <android.support.v7.widget.AppCompatButton
@@ -78,13 +78,13 @@
             android:layout_alignParentStart="true" />
 
         <TextView
-            android:id="@+id/link_signup"
+            android:id="@+id/forgotPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Pas encore de compte? Créez en un"
+            android:text="Vous avez oublié votre mot de passe ?"
             android:textSize="16dip"
-            android:layout_below="@+id/button2"
+            android:layout_below="@+id/signup"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="11dp" />
