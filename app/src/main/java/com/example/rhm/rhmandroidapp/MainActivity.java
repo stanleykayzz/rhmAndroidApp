@@ -1,9 +1,9 @@
 package com.example.rhm.rhmandroidapp;
 
-import android.app.FragmentManager;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -15,6 +15,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.android.gms.maps.SupportMapFragment;
+
 import rhm.com.fragment.gallery;
 import rhm.com.fragment.main;
 import rhm.com.fragment.booking;
@@ -54,7 +57,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //On rajoute du code pour gérer nos fragments
-        FragmentManager fragMan = getFragmentManager();
+        FragmentManager fragMan = getSupportFragmentManager();
         fragMan.beginTransaction().replace(R.id.content_frame, new main()).commit();
     }
 
@@ -93,7 +96,7 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        FragmentManager fragMan = getFragmentManager();
+        FragmentManager fragMan = getSupportFragmentManager();
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -118,7 +121,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact) {
             fragMan.beginTransaction().replace(R.id.content_frame, new contact()).commit();
         } else if (id == R.id.nav_location) {
-            fragMan.beginTransaction().replace(R.id.content_frame, new location()).commit();
+            location locationFragment = new location();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, locationFragment).commit();
+
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
