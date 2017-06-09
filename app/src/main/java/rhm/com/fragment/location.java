@@ -1,10 +1,14 @@
 package rhm.com.fragment;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +54,7 @@ public class location extends Fragment implements OnMapReadyCallback {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        SupportMapFragment supportMapFrag = (SupportMapFragment)getChildFragmentManager().findFragmentById(R.id.myMap);
+        SupportMapFragment supportMapFrag = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.myMap);
         supportMapFrag.getMapAsync(this);
     }
 
@@ -62,11 +66,14 @@ public class location extends Fragment implements OnMapReadyCallback {
         MarkerOptions options = new MarkerOptions();
         options.position(coord).title("L'endroit que vous cherchez certainement").snippet("Avec de petites explications en plus");
         this.myGoogleMap.addMarker(options);
-        //on zoom la caméra sur le point de destination
         this.myGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(coord,13));
-        /*this.myGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
-        this.myGoogleMap.getUiSettings().setAllGesturesEnabled(true);
-        this.myGoogleMap.getUiSettings().setCompassEnabled(true);
-        this.myGoogleMap.getUiSettings().setZoomControlsEnabled(true);*/
+
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
+                ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            this.myGoogleMap.setMyLocationEnabled(true);
+            this.myGoogleMap.getUiSettings().setZoomControlsEnabled(true);
+        }
+        //on zoom la caméra sur le point de destination
+        //this.myGoogleMap.getUiSettings().setAllGesturesEnabled(true);
     }
 }
