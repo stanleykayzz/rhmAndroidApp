@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 import com.example.rhm.rhmandroidapp.R;
 
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -24,6 +23,8 @@ public class room extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_room, container, false);
+        View v = inflater.inflate(R.layout.fragment_room, container, false);
+        getActivity().setTitle("Nos chambres");
+        return v;
     }
 }

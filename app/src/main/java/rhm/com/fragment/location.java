@@ -48,6 +48,7 @@ public class location extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View fragLocation = inflater.inflate(R.layout.fragment_location, container, false);
+        getActivity().setTitle("Localisation");
         return fragLocation;
     }
 
@@ -72,6 +73,8 @@ public class location extends Fragment implements OnMapReadyCallback {
                 ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             this.myGoogleMap.setMyLocationEnabled(true);
             this.myGoogleMap.getUiSettings().setZoomControlsEnabled(true);
+            this.myGoogleMap.getUiSettings().setMapToolbarEnabled(true);
+            this.myGoogleMap.getUiSettings().setCompassEnabled(true);
         }
         //on zoom la caméra sur le point de destination
         //this.myGoogleMap.getUiSettings().setAllGesturesEnabled(true);
