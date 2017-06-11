@@ -1,66 +1,118 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.rhm.rhmandroidapp.rhm.com.fragment.contact">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
-    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <RelativeLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="220dp"
+        android:src="@drawable/bar2"/>
 
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avez-vous des question?" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Le personnel de la résidence des hauts de menaye est à votre disposition pour toutes informations complémentaires."
+        android:textColor="@color/custom_black_background"/>
+
+    <!--Nom Label-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/input_nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:layout_marginTop="15dp"
+            android:hint="Nom"
+            android:inputType="text"
+            android:textColorHint="@color/custom_green_background"/>
+    </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/contactEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/editText"
-            android:layout_alignRight="@+id/editText"
-            android:layout_below="@+id/editText"
+            android:layout_below="@+id/contactEmail"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:text="adresse email"/>
+            android:hint="adresse email"
+            android:textColorHint="@color/custom_green_background"/>
 
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
         <EditText
             android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/editText2"
-            android:layout_alignRight="@+id/editText2"
-            android:layout_below="@+id/editText2"
+            android:layout_below="@+id/editText3"
             android:ems="10"
             android:inputType="phone"
-            android:text="Numéro de téléphone"/>
+            android:hint="Numéro de téléphone"/>
+    </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputmulti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
         <EditText
             android:id="@+id/editText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/editText3"
+            android:layout_below="@+id/inputmulti"
             android:ems="10"
             android:inputType="textMultiLine"
-            android:text="Saisissez votre message ici."/>
+            android:hint="Saisissez votre message ici."
+            android:textColorHint="@color/custom_green_background"/>
+    </android.support.design.widget.TextInputLayout>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/editText4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="89dp"
-            android:text="Envoyer" />
-    </RelativeLayout>
-</FrameLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="398dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText4"
+        android:layout_centerHorizontal="true"
+        android:text="Envoyer" />
+
+
+</LinearLayout>
+    </ScrollView>
+
