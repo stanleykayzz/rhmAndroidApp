@@ -16,7 +16,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.29"
-            android:background="@mipmap/simplelogo" />
+            android:background="@mipmap/simplelogomodified" />
 
         <!--Email Label-->
         <android.support.design.widget.TextInputLayout
