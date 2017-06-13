@@ -18,6 +18,7 @@ import android.view.MenuItem;
 
 import com.google.android.gms.maps.SupportMapFragment;
 
+import rhm.com.fragment.account;
 import rhm.com.fragment.gallery;
 import rhm.com.fragment.main;
 import rhm.com.fragment.booking;
@@ -116,16 +117,14 @@ public class MainActivity extends AppCompatActivity
             fragMan.beginTransaction().replace(R.id.content_frame, new hotel()).commit();
         } else if (id == R.id.nav_login) {
             fragMan.beginTransaction().replace(R.id.content_frame, new login()).commit();
-        } else if (id == R.id.nav_logout) {
-            fragMan.beginTransaction().replace(R.id.content_frame, new logout()).commit();
         } else if (id == R.id.nav_contact) {
             fragMan.beginTransaction().replace(R.id.content_frame, new contact()).commit();
+        } else if (id == R.id.nav_account) {
+            fragMan.beginTransaction().replace(R.id.content_frame, new account()).commit();
         } else if (id == R.id.nav_location) {
             location locationFragment = new location();
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, locationFragment).commit();
-
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

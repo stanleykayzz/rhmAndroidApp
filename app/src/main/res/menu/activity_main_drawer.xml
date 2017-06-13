@@ -1,39 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_room"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Chambre" />
-        <item
-            android:id="@+id/nav_book"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Réservation" />
-        <item
-            android:id="@+id/nav_hotel"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Hôtel" />
         <item
             android:id="@+id/nav_login"
             android:icon="@drawable/ic_menu_manage"
             android:title="Connexion" />
         <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Déconnexion" />
+            android:id="@+id/nav_hotel"
+            android:icon="@drawable/house"
+            android:title="Hôtel" />
+        <item
+            android:id="@+id/nav_room"
+            android:icon="@drawable/bed"
+            android:title="Chambre" />
+        <item
+            android:id="@+id/nav_book"
+            android:icon="@drawable/book"
+            android:title="Réservation" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
             android:title="Galerie" />
         <item
             android:id="@+id/nav_account"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/account"
             android:title="Compte" />
         <item
             android:id="@+id/nav_location"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Location" />
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Localisation" />
         <item
             android:id="@+id/nav_contact"
             android:icon="@drawable/ic_menu_slideshow"
