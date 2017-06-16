@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">RhmAndroidApp</string>
-    <string name="room_type">Choose a room type</string>
+    <string name="room_type">Choisissez un type de chambre</string>
+    <string name="currency_type">Choisissez une devise</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="roomList">
@@ -8,6 +9,12 @@
         <item> Chambre double</item>
         <item> Suite Junior</item>
         <item> Suite executive</item>
+    </string-array>
+
+    <string-array name="currencyList">
+        <item> Euro </item>
+        <item> Dollar </item>
+        <item> Franc CFA </item>
     </string-array>
 
     <string name="mapKey">AIzaSyCTdiB-7-iIs6sosMjOFhMVI-rfBOZjzXU</string>
