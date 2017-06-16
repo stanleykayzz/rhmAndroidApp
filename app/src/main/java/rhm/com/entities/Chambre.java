@@ -1,10 +1,12 @@
 package rhm.com.entities;
 
+import java.io.Serializable;
+
 /**
  * Created by alvin.ondzounga on 10/06/2017.
  */
 
-public class Chambre {
+public class Chambre implements Serializable{
     private int idRoom;
     private int number;
     private int photo;
@@ -61,6 +63,9 @@ public class Chambre {
     }
     public void setPriceRoom(double price){
         this.PriceRoom = price;
+    }
+    public String getPriceIntoString(){
+        return Double.toString(getPrice());
     }
 
 }
