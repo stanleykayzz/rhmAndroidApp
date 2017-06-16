@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.content_frame) {
-            fragMan.beginTransaction().replace(R.id.content_frame, new main()).commit();
+            fragMan.beginTransaction().replace(R.id.content_frame, new booking()).commit();
         } else if (id == R.id.nav_gallery) {
            // fragMan.beginTransaction().replace(R.id.content_frame, new gallery()).commit();
             Intent gallery = new Intent(this, com.example.rhm.rhmandroidapp.gallery.class);
